@@ -1,0 +1,8 @@
+fetch_interval: 300
+webhooks:
+  - 'your_webhook_here'
+feeds:
+  -
+    url: 'https://www.ruby-lang.org/en/feeds/news.rss'
+    title: 'Ruby'
+    icon_url: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg'
