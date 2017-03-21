@@ -9,7 +9,7 @@ require 'active_support/core_ext/string/filters'
 begin
   CONFIG = YAML.load_file('config.yml')
 rescue Errno::ENOENT
-  abort 'ERROR: config.yml not found. Copy, edit and rename config-sample.yml if this has not yet been done.'
+  abort "ERROR: config.yml not found. Copy, edit and rename config-sample.yml if this has not yet been done."
 end
 
 require_relative 'lib/feed'
