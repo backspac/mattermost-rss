@@ -1,6 +1,20 @@
+# (default: 300)
 fetch_interval: 300
+
+# Prevents reposting everything upon restart (default: true)
+ignore_first_run: true
+
+# (default: 'https://upload.wikimedia.org/wikipedia/en/4/43/Feed-icon.svg')
+default_icon: 'https://upload.wikimedia.org/wikipedia/en/4/43/Feed-icon.svg'
+
+# (default: "RSS")
+default_title: "RSS"
+
+# Mandatory
 webhooks:
   - 'your_webhook_here'
+
+# Mandatory
 feeds:
   -
     url: 'https://www.ruby-lang.org/en/feeds/news.rss'
