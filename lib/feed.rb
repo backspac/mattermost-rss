@@ -2,7 +2,7 @@
 
 class Feed
 
-  DEFAULT_ICON  = CONFIG.fetch('default_icon')  { 'https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg' }
+  DEFAULT_ICON  = CONFIG.fetch('default_icon')  { 'https://upload.wikimedia.org/wikipedia/en/4/43/Feed-icon.svg' }
   DEFAULT_TITLE = CONFIG.fetch('default_title') { 'RSS' }
 
   attr_reader :icon_url, :last_item, :title, :url
