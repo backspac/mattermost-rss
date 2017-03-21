@@ -20,8 +20,8 @@ class MattermostRss
 
   def initialize
     @fetch_interval = CONFIG.fetch('fetch_interval') { 300 }
-    @feeds          = CONFIG.fetch('feeds').map { |feed_hash| Feed.new(feed_hash) }
-    @webhooks       = CONFIG.fetch('webhooks')
+    @feeds          = CONFIG.fetch('feeds')          { abort "No feeds provided"    }.map { |feed_hash| Feed.new(feed_hash) }
+    @webhooks       = CONFIG.fetch('webhooks')       { abort "No webhooks provided" }
   end
 
   def work
