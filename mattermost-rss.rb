@@ -19,7 +19,7 @@ class MattermostRss
   attr_reader :feeds, :fetch_interval, :settings, :webhooks
 
   def initialize
-    @fetch_interval = CONFIG.fetch('fetch_interval')
+    @fetch_interval = CONFIG.fetch('fetch_interval') { 300 }
     @feeds          = CONFIG.fetch('feeds').map { |feed_hash| Feed.new(feed_hash) }
     @webhooks       = CONFIG.fetch('webhooks')
   end
