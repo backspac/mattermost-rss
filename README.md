@@ -41,3 +41,11 @@ WantedBy=multi-user.target
 systemctl enable mattermost-rss.service
 systemctl start mattermost-rss.service
 ```
+
+## Development
+
+Probably the easiest way to get started and see if it works is to use a [Mattermost Helm Chart](https://github.com/mattermost/mattermost-helm) on [minikube](https://github.com/kubernetes/minikube).
+
+Follow the TL;DR and run the given `kubectl port-forward` command after installing the chart.
+
+You can then create a webhook, copy the link in your `config.yml` and run `bundle exec ruby mattermost-rss.rb`.
